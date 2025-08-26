@@ -15,7 +15,7 @@ elseif (${ANDROID_ABI} STREQUAL "x86")
     set(DUMMY "1")
 elseif (${ANDROID_ABI} STREQUAL "x86_64")
     set(ARCH "x86_64")
-    set(ARCH_LINK_FLAGS "")
+    set(ARCH_LINK_FLAGS "-Wl,-z,max-page-size=16384")
     set(DUMMY "1")
 endif()
 
